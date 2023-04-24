@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrionTekTest.Domain", "Orio
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrionTekTest.Application", "OrionTekTest.Application\OrionTekTest.Application.csproj", "{B7CFBFF4-D7D6-494D-9DEF-347CE99B97EE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrionTekTest.Configurations", "OrionTekTest.Configurations\OrionTekTest.Configurations.csproj", "{51B77E62-5AFD-4A87-8571-0E5FB528F78A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{B7CFBFF4-D7D6-494D-9DEF-347CE99B97EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B7CFBFF4-D7D6-494D-9DEF-347CE99B97EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B7CFBFF4-D7D6-494D-9DEF-347CE99B97EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51B77E62-5AFD-4A87-8571-0E5FB528F78A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51B77E62-5AFD-4A87-8571-0E5FB528F78A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51B77E62-5AFD-4A87-8571-0E5FB528F78A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51B77E62-5AFD-4A87-8571-0E5FB528F78A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
