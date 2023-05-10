@@ -18,5 +18,10 @@ namespace OrionTekTest.Data
         {
             return await _dbSet.Include(i => i.Addresses).Where(i => i.Status == true).ToListAsync();
         }
+
+        public async override Task<Customer> GetByIdAsync(int id)
+        {
+            return await _dbSet.Include(i=>i.Addresses).FirstOrDefaultAsync(i => i.Id == id);
+        }
     }
 }

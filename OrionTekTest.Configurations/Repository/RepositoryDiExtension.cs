@@ -10,6 +10,7 @@ namespace OrionTekTest.Configurations.Repository
         public static void AddRepositories(this IServiceCollection services)
         {
             services.AddScoped(typeof(IRepository<Customer>), typeof(CustomerRepository));
+            services.AddScoped(typeof(IRepository<Address>), typeof(Repository<Address>));
         }
     }
 }

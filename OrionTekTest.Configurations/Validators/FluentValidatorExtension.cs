@@ -1,6 +1,9 @@
-﻿using FluentValidation.AspNetCore;
+﻿using FluentValidation;
+using FluentValidation.AspNetCore;
 using Microsoft.Extensions.DependencyInjection;
+using OrionTekTest.Domain.Entities;
 using OrionTekTest.Domain.Validators;
+using System;
 
 namespace OrionTekTest.Configurations.Validators
 {
@@ -8,14 +11,11 @@ namespace OrionTekTest.Configurations.Validators
     {
         public static void AddValidators(this IServiceCollection services)
         {
-            services.AddFluentValidation(options =>
-            {
-                // Validate child properties and root collection elements
-                options.ImplicitlyValidateChildProperties = true;
-                options.ImplicitlyValidateRootCollectionElements = true;
-                // Automatic registration of validators in assembly
-                options.RegisterValidatorsFromAssemblyContaining<CustomerValidator>();
-            });
+            services.AddFluentValidationClientsideAdapters();
+
+            services.AddScoped<IValidator<Customer>, CustomerValidator>();
+
+            services.AddScoped<IValidator<Address>, AddressValidator>();
         }
     }
 }

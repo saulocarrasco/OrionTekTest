@@ -26,7 +26,7 @@ builder.Services.AddSwaggerGen(c =>
 builder.Services.AddControllers().AddJsonOptions(x => x.JsonSerializerOptions.
 ReferenceHandler = ReferenceHandler.IgnoreCycles).ConfigureApiBehaviorOptions(options =>
 {
-    //options.SuppressModelStateInvalidFilter = true;
+    options.SuppressModelStateInvalidFilter = true;
 
     options.InvalidModelStateResponseFactory = c =>
     {
@@ -52,6 +52,8 @@ var app = builder.Build();
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
+
+app.UseCors("CustomerApiCors");
 
 app.MapControllers();
 

@@ -21,7 +21,7 @@ namespace OrionTekTest.Data
             return await _dbSet.Where(i => i.Status == true).ToListAsync();
         }
 
-        public async Task<TEntity> GetByIdAsync(int id)
+        public virtual async Task<TEntity> GetByIdAsync(int id)
         {
             return await _dbSet.FirstOrDefaultAsync(i => i.Id == id);
         }
@@ -39,7 +39,6 @@ namespace OrionTekTest.Data
         public async Task<TEntity> UpdateAsync(TEntity entity)
         {
             entity.UpdatedAt = DateTime.UtcNow;
-            entity.Status = true;
             _dbSet.Update(entity);
             await _dbContext.SaveChangesAsync();
 
